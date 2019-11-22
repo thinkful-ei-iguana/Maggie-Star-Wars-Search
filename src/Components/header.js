@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <div>
-      <h1>A Galaxy Far, Far Away Directory</h1>
+      <h1>Find a Hero</h1>
     </div>
   )
 }
