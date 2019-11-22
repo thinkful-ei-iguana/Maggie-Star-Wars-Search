@@ -58,7 +58,7 @@ class Search extends Component {
           className="submit-button"
           disabled={this.validateInput()}
         >
-          Warp Speed!
+          Lightspeed!
         </button>
       </form>
     )

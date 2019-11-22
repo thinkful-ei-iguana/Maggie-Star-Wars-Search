@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "alias": "star-wars-characters-search",
+  "name": "star-wars-characters-search",
+  "routes": [
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": ".*",
+      "dest": "/index.html"
+    }
+  ]
+}

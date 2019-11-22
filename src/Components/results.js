@@ -19,7 +19,7 @@ class Results extends Component {
     )
   }
 }
-//name={character[index].name}
+
 Results.defaultProps = {
   characters: {
     results: []
