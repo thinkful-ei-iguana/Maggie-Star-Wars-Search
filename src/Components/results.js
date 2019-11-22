@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import EachCharacter from './eachCharacter';
+import cuid from 'cuid';
 
-function Results(props) {
-  console.log(props);
-  // return (
-  //   <ul className="results-list">
-  //     {props.characters.map((name, index) => {
-  //       return (
-  //         <EachCharacter key={index}
-  //           name={props.characters[index].name}
-  //         />
-  //       )
-  //     })}
-  //   </ul>
-  // )
-  return (null)
+class Results extends Component {
+
+  render() {
+    console.log(this.props);
+    return (
+      <ul className="results-list">
+        {this.props.characters.results.map((character) =>
+          <EachCharacter key={cuid()}
+            name={character.name}
+          />)
+        }
+      </ul>
+    )
+  }
+}
+//name={character[index].name}
+Results.defaultProps = {
+  characters: {
+    results: []
+  }
 }
 
 
 export default Results;
+
