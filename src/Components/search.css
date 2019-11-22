@@ -1,0 +1,13 @@
+#search {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button, input {
+  border: 2px solid black;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
