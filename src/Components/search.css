@@ -4,10 +4,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 65px;
 }
 
 button, input {
   border: 2px solid black;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
   font-weight: bold;
+}
+
+input {
+  height: 25px;
+  width: 220px;
+  text-align: center;
+  font-size: 18px;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 18px;
 }

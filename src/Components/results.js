@@ -5,12 +5,14 @@ import cuid from 'cuid';
 class Results extends Component {
 
   render() {
-    console.log(this.props);
     return (
       <ul className="results-list">
         {this.props.characters.results.map((character) =>
           <EachCharacter key={cuid()}
             name={character.name}
+            birthyear={character.birth_year}
+            starships={character.starships}
+            films={character.films}
           />)
         }
       </ul>

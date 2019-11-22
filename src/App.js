@@ -15,28 +15,12 @@ class App extends Component {
         results: []
       },
     }
-    console.log(this.state)
   }
 
-  // fetchResults = (input) => {
-  //   console.log('input is:', input);
-  //   this.setState({
-  //     characters: input
-  //   })
-  //   console.log('state is now:', this.state);
-  // }
-  // `https://cors-anywhere.herokuapp.com/https://swapi.co/api/`
-
   handleSubmitAPI = (name) => {
-    // e.preventDefault();
-    console.log('at handleSubmit, name is:', name);
 
     let encodeName = encodeURIComponent(name.name);
-
-    console.log('encoded name is,', encodeName);
     const url = `https://swapi.co/api/people/?search=${encodeName}`
-
-    console.log('full url is:', url);
 
     return fetch(url, {
       method: "GET",
@@ -54,7 +38,6 @@ class App extends Component {
 
       .then(data => {
         const characterResults = data;
-        console.log("characterdata is", characterResults)
         this.setState({ results: characterResults })
       })
       .catch(err => console.log('Error caught', err))

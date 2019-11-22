@@ -36,7 +36,6 @@ class Search extends Component {
     let input = {
       name: `${this.state.name.value}`
     };
-    console.log('consolidated name info is', input);
     this.props.handleSubmit(input);
   }
 
@@ -49,9 +48,9 @@ class Search extends Component {
           <input
             id="search-field"
             name="character"
-            placeholder="Yoda"
+            placeholder="example: Yoda"
             required
-            onChange={e => this.setStateName(e.target.value)}
+            onChange={e => { this.setStateName(e.target.value) }}
           />
         </label>
         <button
